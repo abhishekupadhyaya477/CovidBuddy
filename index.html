@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="favicon/apple-touch-icon.png"
+    />
+    <title>CovidBuddy</title>
+  </head>
+  <body onload="fetch()">
+    <nav class="header" id="nav">
+      <h1 class="logo">
+        <a href="#"><img src="images/CovidLogo.png" alt="CovidBuddy" /></a>
+      </h1>
+      <ul class="main-nav" >
+        <li><a href="#home_id">Home</a></li>
+        <li><a href="#coviddata_id">Live data</a></li>
+        <li><a href="#about_id">About</a></li>
+        <li><a href="#symptoms_id">Symptoms</a></li>
+        <li><a href="#prevention_id">Preventions</a></li>
+        <li><a href="#contact_id">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="main_header home" id="home_id">
+        <div class="row w-100 h-100 row_style">
+            <div class="col-lg-5 col-md-5 col-12 order-lg-1 order-2 " >
+                <div class="leftside w-100 h-100 d-flex justify-content-center align-items-center eksath_anime">
+                    <img src="images/unity.png" width="300" height="300" >
+                </div>
+            </div>
+            
+            <div class="col-lg-7 col-md-7 col-12 order-1 order-lg-2 " >
+                <div class="rightside  w-100 h-100 d-flex justify-content-center align-items-center text-left">
+                    <h1>Let's Stay Safe & Fight Together <br> Against Cor<span class="corona_anime"><img src="images/NoCovid.png"></span>na Virus</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="corono_update container-fluid coviddata mb-0" id="coviddata_id">
+      <div >
+        <h3 class="text-center text-uppercase p-50 form_header">
+          COVID-19 LIVE UPDATES OF THE WORLD
+        </h3>
+
+      <div class="table-responsive">
+        <table class="table table-border table-striped test-center" id="tbval">
+          <tr>
+            <th>Country</th>
+            <th>TotalConfirmed</th>
+            <th>TotalRecovered</th>
+            <th>TotalDeaths</th>
+            <th>NewConfirmed</th>
+            <th>NewRecovered</th>
+            <th>NewDeaths</th>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <div class="container-fluid sub_section pt-5 pb-5 about" id="about_id">
+        <div class="section_header text-center mb-5 mt-4">
+            <h1 class="">About COVID-19</h1>
+        </div>
+    
+        <div class="row pt-5">
+            <div class="col-lg-5 col-md-6  col-6 ml-5">
+                <!-- <div class="  "> -->
+                    <img src="images/aboutcorona.jpg" class="img-fluid">
+                <!-- </div> -->
+            </div>
+    
+            <div class="col-lg-6  col-md-6 col-6">
+                    <h2 class="pb-3">What is COVID-19 (Corona-Virus)</h2>
+                    <p>COVID-19 is the infectious disease caused by the most recently discovered coronavirus. This new virus and disease were unknown before the outbreak began in Wuhan, China, in December 2019.</p>
+                    <p>Coronaviruses are a large family of viruses which may cause illness in animals or humans.  In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS). The most recently discovered coronavirus causes coronavirus disease COVID-19.
+                    </p>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid  pt-5 pb-5 symptoms" id="symptoms_id">
+        <div class="section_header text-center mb-5 mt-4">
+            <h1 class="">Coronavirus symptoms </h1>
+        </div>
+    
+        <div class="container">
+            <div class="row">
+                <div class= "col-lg-4 col-md-4 col-12 mt-5 " > 
+                    <figure class="text-center">
+                        <img src="images/cough.png" class="img-fluid" width="120" height="120">
+                        <figcaption > cough </figcaption>
+                    </figure>
+                </div>
+    
+                <div class= "col-lg-4 col-md-4 col-12 mt-5 " > 
+                    <figure  class="text-center">
+                        <img src="images/runnynose.png" class="img-fluid" width="120" height="120">
+                        <figcaption > runny nose </figcaption>
+                    </figure>
+                </div>
+    
+                <div class= "col-lg-4 col-md-4 col-12 mt-5 " > 
+                    <figure  class="text-center">
+                        <img src="images/fever.png" class="img-fluid" width="120" height="120">
+                        <figcaption > fever </figcaption>
+                    </figure>
+                </div>
+    
+                <div class= "col-lg-4 col-md-4 col-12 mt-5 " > 
+                    <figure  class="text-center">
+                        <img src="images/sick.png" class="img-fluid" width="120" height="120">
+                        <figcaption > cold </figcaption>
+                    </figure>
+                </div>
+    
+                <div class= "col-lg-4 col-md-4 col-12 mt-5 " > 
+                    <figure  class="text-center" >
+                        <img src="images/week.png" class="img-fluid" width="120" height="120">
+                        <figcaption > tiredness </figcaption>
+                    </figure>
+                </div>
+    
+                <div class= "col-lg-4 col-md-4 col-12 mt-5 " > 
+                    <figure  class="text-center">
+                        <img src="images/breath.png" class="img-fluid" width="120" height="120">
+                        <figcaption > difficulty breathing (severe cases) </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <div class="container-fluid sub_section pt-5 pb-5 prevention" id="prevention_id">
+        <div class="section_header text-center mb-5 mt-4">
+            <h1 class="text-capitalize">6 steps Prevention against Coronavirus  </h1>
+        </div>
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4  col-md-4  col-12 mt-5">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12 ">
+                            <figure>
+                                <img src="images/handwash.png" class="img-fluid" width="90" height="90">
+                            </figure>
+                        </div>
+                         <div class="col-lg-8 col-md-8 col-12">
+                            <p>Wash your hands regularly for 20 seconds, with soap and water or alcohol-based hand rub</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4  col-md-4  col-12 mt-5">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12 ">
+                            <figure>
+                                <img src="images/mask.png" class="img-fluid" width="90" height="90">
+                            </figure>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-12">
+                            <p>Cover your nose and mouth with a disposable tissue or flexed elbow when you cough or sneeze</p>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="col-lg-4  col-md-4  col-12 mt-5">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12 ">
+                            <figure>
+                                <img src="images/quarantine.png" class="img-fluid" width="90" height="90">
+                            </figure>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-12">
+                            <p>Avoid close contact (1 meter or 3 feet) with people who are unwell</p>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="col-lg-4  col-md-4  col-12 mt-5">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12 ">
+                            <figure>
+                                <img src="images/home.png" class="img-fluid" width="90" height="90">
+                            </figure>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-12">
+                            <p>Stay home and self-isolate from others in the household if you feel unwell</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4  col-md-4  col-12 mt-5">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12 ">
+                            <figure>
+                                <img src="images/news.png" class="img-fluid" width="90" height="90">
+                            </figure>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-12">
+                            <p>Stay informed by watching news & follow the recommended practices</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4  col-md-4  col-12 mt-5">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12 ">
+                            <figure>
+                                <img src="images/medical.png" class="img-fluid" width="90" height="90">
+                            </figure>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-12">
+                            <p>If you have fever, cough and difficulty breathing, seek medical care early</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact" id="contact_id">
+        
+        <div>
+            <h1 class="form_header">Contact Us ASAP</h1>
+            
+            <form action="https://formspree.io/f/mwkyplnn" method="POST" class="container pt-30">
+              <hr>
+              <h2>Your Details</h2>
+              <p>Name:* <input type="text" name="name" id="" required placeholder="Enter your name"/></p>
+              <!-- <fieldset>
+                <legend>Gender *</legend>
+                <p>
+                  Male <input type="radio" name="gender" id="male" required /> 
+                  Female <input type="radio" name="gender" id="female" required />
+                </p>
+              </fieldset> -->
+              <p>Email: <input type="email" name="email" id="email" placeholder="example@gmail.com"/></p>
+              <p>Phone Number:* <input type="number" name="phone" id="" required placeholder="eg. 9876543210"/></p>
+              <p>Message <textarea name="" id="" cols="60" rows="8" placeholder="Tell us what problem are you facing "></textarea></p>
+        
+              <h2>Your Symptoms:</h2>
+              <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+                <input type="checkbox" class="custom-control-input " id="customcheckbox1"    name="coronasym[]" value="cold">
+                <label class="custom-control-label" for="customcheckbox1">Cold</label>
+              </div>
+              <div class="custom-control custom-checkbox custom-control-inline text-capitalize ">
+                <input type="checkbox" class="custom-control-input  "  id="customcheckbox2" name="coronasym[]" value="fever">
+                <label class="custom-control-label" for="customcheckbox2">fever</label>
+              </div>
+
+               <div class="custom-control custom-checkbox custom-control-inline text-capitalize ">
+                <input type="checkbox" class="custom-control-input  " id="customcheckbox3" name="coronasym[]" value="breath">
+                <label class="custom-control-label" for="customcheckbox3">difficulty in breath</label>
+              </div>
+
+               <div class="custom-control custom-checkbox custom-control-inline text-capitalize ">
+                <input type="checkbox" class="custom-control-input  " id="customcheckbox4" name="coronasym[]" value="tired">
+                <label class="custom-control-label" for="customcheckbox4">feeling weak</label>
+              </div>
+            </div>
+                <div class ="submit_btn">
+              <input type="submit" value="Submit" />
+            </div>  
+            </form>
+          </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+      integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
+      integrity="sha256-JtQPj/3xub8oapVMaIijPNoM0DHoAtgh/gwFYuN5rik="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+      $(".count").counterUp({
+        delay: 10,
+        time: 300,
+      });
+      function fetch() {
+        $.get("https://api.covid19api.com/summary", function (data) {
+          // console.log(data['Countries'].length);
+          var tbval = document.getElementById("tbval");
+          for (var i = 1; i < data["Countries"].length; i++) {
+            var x = tbval.insertRow();
+            x.insertCell(0);
+            tbval.rows[i].cells[0].innerHTML =
+              data["Countries"][i - 1]["Country"];
+            tbval.rows[i].cells[0].style.background = "linear-gradient(120deg, #cfd9df 0%,#e2ebf0 100%)";
+            tbval.rows[i].cells[0].style.color = "#333";
+
+            x.insertCell(1);
+            tbval.rows[i].cells[1].innerHTML =
+              data["Countries"][i - 1]["TotalConfirmed"];
+            tbval.rows[i].cells[1].style.background = " linear-gradient(120deg, #a6c0fe 0%, #f68084 100%)";
+
+            x.insertCell(2);
+            tbval.rows[i].cells[2].innerHTML =
+              data["Countries"][i - 1]["TotalRecovered"];
+            tbval.rows[i].cells[2].style.background = "linear-gradient(45deg, #00ff75 0%, #7dffae 100%)";
+
+            x.insertCell(3);
+            tbval.rows[i].cells[3].innerHTML =
+              data["Countries"][i - 1]["TotalDeaths"];
+            tbval.rows[i].cells[3].style.background = "linear-gradient(148deg, #ef0a0e 0%, #b54458 100%)";
+
+            x.insertCell(4);
+            tbval.rows[i].cells[4].innerHTML =
+              data["Countries"][i - 1]["NewConfirmed"];
+            tbval.rows[i].cells[4].style.background = "linear-gradient(120deg, #a6c0fe 100%, #f68084 0%)";
+
+            x.insertCell(5);
+            tbval.rows[i].cells[5].innerHTML =
+              data["Countries"][i - 1]["NewRecovered"];
+            tbval.rows[i].cells[5].style.background = "#9cc850";
+
+            x.insertCell(6);
+            tbval.rows[i].cells[6].innerHTML =
+              data["Countries"][i - 1]["NewDeaths"];
+            tbval.rows[i].cells[6].style.background = "linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%)";
+          }
+        });
+      }
+
+    //   For Scrolling
+    $(document).ready(function() {
+
+$(window).scroll(function () {
+    //if you hard code, then use console
+    //.log to determine when you want the 
+    //nav bar to stick.  
+    console.log($(window).scrollTop())
+  if ($(window).scrollTop() > 280) {
+    $('#nav').removeClass('navbar-trans').addClass('navbar-fixed');
+  }
+  if ($(window).scrollTop() < 281) {
+    $('#nav').removeClass('navbar-fixed').addClass('navbar-trans');
+  }
+});
+});
+
+    </script>
+  </body>
+</html>
