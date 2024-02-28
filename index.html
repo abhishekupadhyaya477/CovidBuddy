@@ -311,48 +311,81 @@
         time: 300,
       });
       function fetch() {
-        $.get("https://api.covid19api.com/summary", function (data) {
-          // console.log(data['Countries'].length);
+        try{
+          $.get("https://api.covid19api.com/summary", function (data) {
+            // console.log(data['Countries'].length);
+            var tbval = document.getElementById("tbval");
+            console.log(data);
+            if(data["Countries"].length){
+              for (var i = 1; i < data["Countries"].length; i++) {
+                var x = tbval.insertRow();
+                x.insertCell(0);
+                tbval.rows[i].cells[0].innerHTML =
+                  data["Countries"][i - 1]["Country"];
+                tbval.rows[i].cells[0].style.background = "linear-gradient(120deg, #cfd9df 0%,#e2ebf0 100%)";
+                tbval.rows[i].cells[0].style.color = "#333";
+    
+                x.insertCell(1);
+                tbval.rows[i].cells[1].innerHTML =
+                  data["Countries"][i - 1]["TotalConfirmed"];
+                tbval.rows[i].cells[1].style.background = " linear-gradient(120deg, #a6c0fe 0%, #f68084 100%)";
+    
+                x.insertCell(2);
+                tbval.rows[i].cells[2].innerHTML =
+                  data["Countries"][i - 1]["TotalRecovered"];
+                tbval.rows[i].cells[2].style.background = "linear-gradient(45deg, #00ff75 0%, #7dffae 100%)";
+    
+                x.insertCell(3);
+                tbval.rows[i].cells[3].innerHTML =
+                  data["Countries"][i - 1]["TotalDeaths"];
+                tbval.rows[i].cells[3].style.background = "linear-gradient(148deg, #ef0a0e 0%, #b54458 100%)";
+    
+                x.insertCell(4);
+                tbval.rows[i].cells[4].innerHTML =
+                  data["Countries"][i - 1]["NewConfirmed"];
+                tbval.rows[i].cells[4].style.background = "linear-gradient(120deg, #a6c0fe 100%, #f68084 0%)";
+    
+                x.insertCell(5);
+                tbval.rows[i].cells[5].innerHTML =
+                  data["Countries"][i - 1]["NewRecovered"];
+                tbval.rows[i].cells[5].style.background = "#9cc850";
+    
+                x.insertCell(6);
+                tbval.rows[i].cells[6].innerHTML =
+                  data["Countries"][i - 1]["NewDeaths"];
+                tbval.rows[i].cells[6].style.background = "linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%)";
+              }
+            }else{
+              var tbval = document.getElementById("tbval");
+          tbval.innerHTML=`
+          <p>Congrats!! Zero active COVID-19 cases - together, we've conquered.</p>
+          <div class="leftside w-100 h-100 d-flex justify-content-center align-items-center eksath_anime">
+                    <img src="images/congrats_covid.jpg" width="300" height="300" >
+                </div>
+          `;
+          tbval.style="width: 100%;margin-bottom: 1rem;color: #28a745;text-align: center;font-weight: bold;font-size: larger;"
+            }
+          });
+        }catch(e){
           var tbval = document.getElementById("tbval");
-          for (var i = 1; i < data["Countries"].length; i++) {
-            var x = tbval.insertRow();
-            x.insertCell(0);
-            tbval.rows[i].cells[0].innerHTML =
-              data["Countries"][i - 1]["Country"];
-            tbval.rows[i].cells[0].style.background = "linear-gradient(120deg, #cfd9df 0%,#e2ebf0 100%)";
-            tbval.rows[i].cells[0].style.color = "#333";
-
-            x.insertCell(1);
-            tbval.rows[i].cells[1].innerHTML =
-              data["Countries"][i - 1]["TotalConfirmed"];
-            tbval.rows[i].cells[1].style.background = " linear-gradient(120deg, #a6c0fe 0%, #f68084 100%)";
-
-            x.insertCell(2);
-            tbval.rows[i].cells[2].innerHTML =
-              data["Countries"][i - 1]["TotalRecovered"];
-            tbval.rows[i].cells[2].style.background = "linear-gradient(45deg, #00ff75 0%, #7dffae 100%)";
-
-            x.insertCell(3);
-            tbval.rows[i].cells[3].innerHTML =
-              data["Countries"][i - 1]["TotalDeaths"];
-            tbval.rows[i].cells[3].style.background = "linear-gradient(148deg, #ef0a0e 0%, #b54458 100%)";
-
-            x.insertCell(4);
-            tbval.rows[i].cells[4].innerHTML =
-              data["Countries"][i - 1]["NewConfirmed"];
-            tbval.rows[i].cells[4].style.background = "linear-gradient(120deg, #a6c0fe 100%, #f68084 0%)";
-
-            x.insertCell(5);
-            tbval.rows[i].cells[5].innerHTML =
-              data["Countries"][i - 1]["NewRecovered"];
-            tbval.rows[i].cells[5].style.background = "#9cc850";
-
-            x.insertCell(6);
-            tbval.rows[i].cells[6].innerHTML =
-              data["Countries"][i - 1]["NewDeaths"];
-            tbval.rows[i].cells[6].style.background = "linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%)";
-          }
-        });
+          tbval.innerHTML=`
+          <p>Congrats!! Zero active COVID-19 cases - together, we've conquered.</p>
+          <div class="leftside w-100 h-100 d-flex justify-content-center align-items-center eksath_anime">
+                    <img src="images/congrats_covid.jpg" width="300" height="300" >
+                </div>
+          `;
+          tbval.style="width: 100%;margin-bottom: 1rem;color: #28a745;text-align: center;font-weight: bold;font-size: larger;"
+        }
+        finally{
+          var tbval = document.getElementById("tbval");
+          tbval.innerHTML=`
+          <p>Congrats!! Zero active COVID-19 cases - together, we've conquered.</p>
+          <div class="leftside w-100 h-100 d-flex justify-content-center align-items-center eksath_anime">
+                    <img src="images/congrats_covid.jpg" width="300" height="300" >
+                </div>
+          `;
+          tbval.style="width: 100%;margin-bottom: 1rem;color: #28a745;text-align: center;font-weight: bold;font-size: larger;"
+        }
       }
 
     //   For Scrolling
